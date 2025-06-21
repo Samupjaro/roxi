@@ -89,8 +89,8 @@ const mensajes = [
   "Tus crespitos son arte puro",
   "Tus pequitas son mini estrellitas",
   "Mia y tu pero mas tu son mi ser vivo favorito😪",
-  "Tú eres la reina que todo rey necesita en sus dias😪.",
-  "Te amo más que a todas estas estrellas."
+  "Tú eres la reina que todo rey necesita en sus dias😪",
+  "Te amo más que a todas estas estrellas"
 ];
 
 for (let i = 0; i < 30; i++) {
