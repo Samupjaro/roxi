@@ -81,15 +81,15 @@ const cielo = document.getElementById('cielo-estrellas');
 const sonido = new Audio('ting.mp3');
 
 const mensajes = [
-  "Eres mi estrella favorita.",
-  "Tu sonrisa ilumina todo.",
-  "Gracias por existir, Roxi.",
-  "Quiero estar contigo por siempre.",
-  "Cada día contigo es mágico.",
-  "Tus crespitos son arte puro.",
-  "Cuando te veo, todo mejora.",
-  "Nuestro amor es como un cielo lleno de estrellas.",
-  "Tú haces que mi universo tenga sentido.",
+  "Eres mi estrella favorita 💗",
+  "Tu sonrisa es la mas linda del universo",
+  "Gracias por existir, Roxii",
+  "Quiero estar contigo por siempre",
+  "Cada día contigo es magico sabias!",
+  "Tus crespitos son arte puro",
+  "Tus pequitas son mini estrellitas",
+  "Mia y tu pero mas tu son mi ser vivo favorito😪",
+  "Tú eres la reina que todo rey necesita en sus dias😪.",
   "Te amo más que a todas estas estrellas."
 ];
 
