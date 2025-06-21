@@ -78,7 +78,7 @@ document.head.appendChild(style);
 
 // Cielo de estrellas interactivas
 const cielo = document.getElementById('cielo-estrellas');
-const sonido = new Audio('audio/ting.mp3');
+const sonido = new Audio('ting.mp3');
 
 const mensajes = [
   "Eres mi estrella favorita.",
