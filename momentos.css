@@ -1,0 +1,68 @@
+body {
+  background-color: #fff0f6;
+  font-family: 'Comic Sans MS', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #d63384;
+  margin-bottom: 2rem;
+}
+
+.capturas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.captura {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.captura:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.captura img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.captura p {
+  margin-top: 0.8rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.volver {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.volver a {
+  background: #ff69b4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.volver a:hover {
+  background: #d63384;
+}
