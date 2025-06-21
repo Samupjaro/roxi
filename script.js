@@ -91,7 +91,6 @@ const mensajes = [
   "Mia y tu pero mas tu son mi ser vivo favorito😪",
   "Tú eres la reina que todo rey necesita en sus dias😪",
   "Te amo más que a todas estas estrellas",
-  "Todo es mental"
 ];
 
 for (let i = 0; i < 30; i++) {
