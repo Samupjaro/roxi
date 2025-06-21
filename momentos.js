@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   loader.className = 'pantalla-carga';
 
   const kitty = document.createElement('img');
-  kitty.src = 'img/kitty-cargando.gif'; // Usa un gif o imagen girando de Hello Kitty
+  kitty.src = 'kitty-cargando.gif'; // Usa un gif o imagen girando de Hello Kitty
   kitty.alt = 'Cargando';
   kitty.className = 'kitty-cargando';
 
