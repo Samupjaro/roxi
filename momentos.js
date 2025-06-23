@@ -1,24 +1,5 @@
 // momentos.js
 
-// Mostrar pantalla de carga antes de mostrar la página
-window.addEventListener('load', () => {
-  const loader = document.createElement('div');
-  loader.className = 'pantalla-carga';
-
-  const kitty = document.createElement('img');
-  kitty.src = 'kitty-cargando.gif'; // Usa un gif o imagen girando de Hello Kitty
-  kitty.alt = 'Cargando';
-  kitty.className = 'kitty-cargando';
-
-  loader.appendChild(kitty);
-  document.body.appendChild(loader);
-
-  setTimeout(() => {
-    loader.remove();
-    iniciarAnimaciones();
-  }, 5000);
-});
-
 function iniciarAnimaciones() {
   const capturas = document.querySelectorAll('.captura');
 
@@ -34,7 +15,6 @@ function iniciarAnimaciones() {
     }, 200 * index);
   });
 
-  // Corazones flotantes mágicos al hacer clic en una imagen
   capturas.forEach(captura => {
     captura.addEventListener('click', (e) => {
       for (let i = 0; i < 5; i++) {
@@ -47,10 +27,7 @@ function iniciarAnimaciones() {
         heart.style.animation = 'subir 2s ease-out forwards';
         heart.style.pointerEvents = 'none';
         document.body.appendChild(heart);
-
-        setTimeout(() => {
-          heart.remove();
-        }, 2000);
+        setTimeout(() => heart.remove(), 2000);
       }
     });
   });
@@ -61,40 +38,105 @@ function iniciarAnimaciones() {
       0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(-100px); opacity: 0; }
     }
-
     .brillar {
       animation: brilloMagico 1.5s ease-in-out;
     }
-
     @keyframes brilloMagico {
       0% { filter: brightness(1); }
       50% { filter: brightness(1.5); }
       100% { filter: brightness(1); }
     }
-
-    .pantalla-carga {
+    .efecto-roxi {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: #fff0f6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-color: rgba(255, 192, 203, 0.4);
+      pointer-events: none;
       z-index: 9999;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Comic Sans MS', cursive;
     }
-
-    .kitty-cargando {
-      width: 120px;
-      height: 120px;
-      animation: girar 2s linear infinite;
+    .mensaje-roxi {
+      font-size: 2rem;
+      color: #d60087;
+      margin-top: 1rem;
+      animation: brilloMagico 2s ease-in-out infinite;
+      z-index: 10000;
     }
-
-    @keyframes girar {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .particula {
+      position: absolute;
+      font-size: 2rem;
+      animation: flotando 2.5s ease-out forwards;
+      pointer-events: none;
+    }
+    @keyframes flotando {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
     }
   `;
   document.head.appendChild(style);
 }
+
+function crearEfectoHelloRoxi(callback) {
+  const overlay = document.createElement('div');
+  overlay.className = 'efecto-roxi';
+
+  const mensaje = document.createElement('div');
+  mensaje.className = 'mensaje-roxi';
+  mensaje.textContent = 'Está cargando todo, Roxi 💕';
+  overlay.appendChild(mensaje);
+
+  const sonido = new Audio('ting.mp3');
+  sonido.play();
+
+  document.body.appendChild(overlay);
+
+  const emojis = ['💖', '🎀', '😺', '🌸', '✨'];
+  for (let i = 0; i < 40; i++) {
+    const p = document.createElement('div');
+    p.className = 'particula';
+    p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.bottom = '0';
+    p.style.fontSize = `${Math.random() * 16 + 16}px`;
+    p.style.animationDelay = (Math.random() * 0.5) + 's';
+    overlay.appendChild(p);
+  }
+
+  setTimeout(() => {
+    overlay.remove();
+    if (callback) callback();
+  }, 2500);
+}
+
+function transicionConEfectoRoxi(urlDestino) {
+  crearEfectoHelloRoxi(() => {
+    window.location.href = urlDestino;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  iniciarAnimaciones();
+
+  crearEfectoHelloRoxi();
+
+  const linkVolver = document.querySelector('.volver a');
+  if (linkVolver) {
+    linkVolver.addEventListener('click', (e) => {
+      e.preventDefault();
+      transicionConEfectoRoxi(linkVolver.href);
+    });
+  }
+});

@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", () => {
   cielo.style.height = "100vh";
 
   // Usa un audio funcional
-  const sonido = new Audio("https://cdn.pixabay.com/audio/2022/03/30/audio_6fefb45c1f.mp3");
+  const sonido = new Audio("ting.mp3");
 
   const mensajes = [
     "Eres mi estrella favorita 💗",

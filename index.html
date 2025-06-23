@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Museo Virtual de Roxi</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="encabezado">
     <h1>Museo Virtual de Roxi</h1>
-    <p>Bienvenida roxii , Este Pagina es solo para tiiii, aqui tú eres el arte 💗</p>
+    <p>Bienvenida roxii, esta página es solo para tiiii, aquí tú eres el arte 💗</p>
   </header>
 
   <nav class="navegacion">
@@ -24,49 +25,134 @@
   </nav>
 
   <main class="contenido">
+    <!-- Temporizador de Cumpleaños -->
+    <section class="contador-cumple">
+      <div class="mensaje">🎂 Tu cumpleaños es en:</div>
+      <div class="reloj" id="cuenta-regresiva"></div>
+      <img src="hellokitty.png" alt="Hello Kitty Cumpleaños" />
+    </section>
+
+    <!-- Crespitos -->
     <section id="sala-crespitos" class="sala">
       <h2>Tus Crespitos</h2>
       <div class="galeria">
-        <div class="cuadro"><img src="IMG_2753.jpeg" alt="Crespitos 1"><p>Así se ven tus crespitos cuando brillan al sol</p></div>
-        <div class="cuadro"><img src="cpm35 2025-05-11 174302.469.jpeg" alt="Crespitos 2"><p>El día que intenté peinarlos 😪</p></div>
+        <div class="cuadro">
+          <img src="IMG_2753.jpeg" alt="Crespitos 1" />
+          <div class="texto">
+            <div class="subtitulo">Crespitos...🎀</div>
+            <p>Esta foto demuestra tu ternura, tus crespitos, tus labios, esa felicidad tuya interna, que muy poco demuestras pero siempre está ahí, siendo nerd como siempre</p>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="cpm35 2025-05-11 174302.469.jpeg" alt="Crespitos 2" />
+          <div class="texto">
+            <div class="subtitulo">Mi intento peinándote 😪</div>
+            <p>Ya eran varias veces las que he intentado hacerte los crespitos, y aunque no me quedan perfectos, tú siempre estás perfecta ante mis ojos 💗</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Sonrisa -->
     <section id="sala-sonrisa" class="sala">
       <h2>Tu Sonrisa</h2>
       <div class="galeria">
-        <div class="cuadro"><img src="img/sonrisa1.jpg" alt="Sonrisa 1"><p>La sonrisa mas linda del universo la tienes tu 😍</p></div>
-        <div class="cuadro"><img src="img/sonrisa2.jpg" alt="Sonrisa 2"><p>Mi lugar favorito en el universo es cuando tu sonríes😪</p></div>
+        <div class="cuadro">
+          <img src="1.jpeg" alt="Sonrisa 1" />
+          <div class="texto">
+            <div class="subtitulo">🌸 Tu sonrisa más brillante</div>
+            <p>Esta foto demustra lo que te dije antes tu niña interior una felicidad sin ser forzada, solo risas de una niña que mas adelante se convetira en el deseño de muchos y muchas 😪</p>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="2.jpeg" alt="Sonrisa 2" />
+          <div class="texto">
+            <div class="subtitulo">💘 Sonríe siempre</div>
+            <p>esa sonrrisa que muy pocos pueden ver y entender, con esa carita de princesa tierna , con ese maquillaje unico que muy pocas se saben hacer, simplemente lo que estamos viendo aqui se llama arte</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Hello Kitty -->
     <section id="sala-hello-kitty" class="sala">
       <h2>Tu Mundo Hello Kitty</h2>
       <div class="galeria">
-        <div class="cuadro"><img src="img/kitty1.jpg" alt="Hello Kitty 1"><p>Tu lado más tierno 🤍</p></div>
-        <div class="cuadro"><img src="img/kitty2.jpg" alt="Hello Kitty 2"><p>Así te imagino feliz, entre rosas y gatitos</p></div>
+        <div class="cuadro">
+          <img src="3.jpeg" alt="Hello Kitty 1" />
+          <div class="texto">
+            <div class="subtitulo">🎀 Ternurita infinita</div>
+            <p>esta muñeca tan preciosa, por algo hello kitty te gusta mucho por los parecidos que tienes con ella, un apersona tranquila, bella, que le gusta arreglarse..</p>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="4.jpeg" alt="Hello Kitty 2" />
+          <div class="texto">
+            <div class="subtitulo">🧸 Gatita feliz</div>
+            <p>esta no es hello kitty es mia pero tambien tiene la misma personalidad, una bella gatita, que se cuida asi misma, linda y que todo el mundo que la mira queda encatando , asi como tambien con la mama</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Recuerdos -->
     <section id="sala-recuerdos" class="sala">
       <h2>Nuestros Recuerdos</h2>
       <div class="galeria">
-        <div class="cuadro"><img src="img/abrazo.jpg" alt="Abrazo"><p>Ese abrazo donde sentí todo contigo</p></div>
-        <div class="cuadro"><img src="img/tiktok.jpg" alt="TikTok"><p>Uno de nuestros TikToks juntos 😪</p></div>
+        <div class="cuadro">
+          <img src="5.jpeg" alt="Abrazo" />
+          <div class="texto">
+            <div class="subtitulo">🤗 El abrazo eterno</div>
+            <p>este como muchos abrazos que se siente ese calor tuyo, esa seguridad, que nos trasmitimos mutuamente, pero este en especial fue lindo..</p>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="6.jpeg" alt="TikTok" />
+          <div class="texto">
+            <div class="subtitulo">🎥 Nuestro TikTok</div>
+            <p>no grabamos muchos tik toks, y los que hicimos son divertidos y ya quedaran grabados para siempre... por cierto boof con esa caderas</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Estrellas -->
     <section id="estrellas" class="sala cielo">
       <h2>🌟 Cielo de Estrellas 🌟</h2>
       <div id="cielo-estrellas">
-        <!-- Estrellas generadas dinámicamente -->
+        <!-- Estrellas generadas por JS -->
       </div>
     </section>
+
   </main>
 
   <footer class="pie">
     <p>Hecho con amor por Samu 💗</p>
-    <script src="script.js"></script>
   </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    function actualizarCuentaRegresiva() {
+      const fechaCumple = new Date("January 7, 2026 00:00:00").getTime();
+      const ahora = new Date().getTime();
+      const diferencia = fechaCumple - ahora;
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      const reloj = document.getElementById("cuenta-regresiva");
+      if (diferencia > 0) {
+        reloj.textContent = `${dias} días, ${horas}h ${minutos}m ${segundos}s`;
+      } else {
+        reloj.textContent = "¡Feliz cumpleaños, Roxi! 🎉💖";
+      }
+    }
+
+    setInterval(actualizarCuentaRegresiva, 1000);
+    actualizarCuentaRegresiva();
+  </script>
 </body>
 </html>
